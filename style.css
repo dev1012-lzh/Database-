@@ -1,0 +1,121 @@
+button {
+
+
+    width: 80%;
+    display: inline;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    display: inline-block;
+    margin-top: 5vh;
+    background-color: white;
+    color: #1b3264;
+
+    justify-self: center;
+    border: 2px solid #1b3264;
+    outline: white 2px solid;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+html {
+
+    font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+button:hover {
+    background: #ffffff10;
+    color: white;
+    border: transparent 2px solid;
+
+}
+
+.noto-sans-<uniquifier> {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+* {
+    font-family: "Noto Sans", sans-serif;
+
+
+}
+
+html {
+    margin: 0;
+}
+
+div.left {
+    display: inline-block;
+    height: 400vh;
+    width: 60%;
+    color: white;
+    background-color: #1b3264;
+}
+
+div.right {
+    display: inline-block;
+    position: fixed;
+    height: 100vh;
+    width: 38%;
+    top: 40vh;
+    color: black;
+    text-align: center;
+    background-color: white;
+}
+
+h2,
+h3 {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p.giliran {
+    display: block;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border: 5px solid white;
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #357cc4;
+    border-radius: 10px;
+    border: solid white 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2c5d8b;
+}
+
+::-webkit-scrollbar-button {
+    color: #357cc4;
+    background-color: #2c5d8b;
+    border: solid white 5px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button:hover {
+    border: solid white 2px;
+}
+
+li{
+    margin-left: 10px;
+}
