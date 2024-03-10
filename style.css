@@ -3,6 +3,9 @@ button {
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
+    background: white;
+    color: #1b3264;
+    font-size: 18px;
 }
 
 html {
