@@ -10,6 +10,8 @@ button {
     font-family: "Noto Sans", sans-serif;
     text-align: center;
     display: inline-block;
+    margin-top: 5vh;
+
     justify-self: center;
 }
 
