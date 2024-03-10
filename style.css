@@ -9,12 +9,23 @@ html {
     margin: 0px;
 }
 
+.fredoka-<uniquifier> {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" <width>;
+}
+
 * {
-    font-family: 'Fredoka One', sans-serif;
+    font-family: "Fredoka", sans-serif;
 }
 
 div.left {
     display: inline-block;
     height: 100vh;
     width: 40%;
+    color: white;
+    background-color: #1b3264;
 }
