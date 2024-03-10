@@ -9,7 +9,7 @@ button {
     font-size: 18px;
     font-family: "Noto Sans", sans-serif;
     text-align: center;
-    justify-content: center;
+    display: inline-block;
     justify-self: center;
 }
 
