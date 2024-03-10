@@ -18,6 +18,15 @@ html {
         "wdth" <width>;
 }
 
+.noto-sans-<uniquifier> {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
 * {
     font-family: "Fredoka", sans-serif;
     margin: 0px;
@@ -31,10 +40,15 @@ div.left {
     background-color: #1b3264;
 }
 
-div.right{
+div.right {
     display: inline-block;
     height: 100vh;
     width: 60%;
     color: black;
     background-color: white;
+}
+
+h2,
+h3 {
+    font-family: 'Noto Sans', sans-serif;
 }
