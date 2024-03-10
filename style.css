@@ -32,7 +32,12 @@ html {
 
 * {
     font-family: "Fredoka", sans-serif;
-    margin: 0px;
+
+
+}
+
+html {
+    margin: 0;
 }
 
 div.left {
