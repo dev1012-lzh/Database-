@@ -7,6 +7,9 @@ button {
     color: #1b3264;
     font-size: 18px;
     font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
 }
 
 html {
