@@ -37,6 +37,10 @@ button:hover {
 
 }
 
+button.join:hover {
+    color: #1b3264;
+}
+
 .noto-sans-<uniquifier> {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
@@ -116,6 +120,33 @@ p.giliran {
     border: solid white 2px;
 }
 
-li{
+li {
     margin-left: 10px;
+}
+
+div.dot {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    animation: dot 1s infinite linear;
+}
+
+div.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+div.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dot {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }

@@ -35,4 +35,5 @@ function chkbox() {
     document.querySelector('button').disabled = false;
     
     document.querySelector('button').style.cursor = 'pointer';
+    document.querySelector('button').style.background = 'white';
 }
