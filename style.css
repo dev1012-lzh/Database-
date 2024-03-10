@@ -3,8 +3,9 @@ button {
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    background: white;
-    color: #1b3264;
+    background: #1b3264;
+    color: white;
+    border-radius: 8px;
     font-size: 18px;
     font-family: "Noto Sans", sans-serif;
     text-align: center;
