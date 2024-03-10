@@ -6,20 +6,14 @@ button {
     background: white;
     color: #1b3264;
     font-size: 18px;
+    font-family: "Noto Sans", sans-serif;
 }
 
 html {
     margin: 0px;
+    font-family: "Noto Sans", sans-serif;
 }
 
-.fredoka-<uniquifier> {
-    font-family: "Fredoka", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" <width>;
-}
 
 .noto-sans-<uniquifier> {
     font-family: "Noto Sans", sans-serif;
