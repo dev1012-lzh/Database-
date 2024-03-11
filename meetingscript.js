@@ -11,6 +11,8 @@ setInterval(() => {
     if (hour > 12) {
         var hour = hour - 12;
         var daylight = 'pm';
+    }else {
+        var daylight = 'am';
     }
     var minute = today.getMinutes();
     if (minute < 10) {
