@@ -20,7 +20,9 @@
                 var hour = hour - 12;
                 var daylight = 'pm';
             }
-            else{var daylight='am';}
+            else {
+                var daylight = 'am';
+            }
             var minute = today.getMinutes();
             if (minute < 10) {
                 var minute = "0" + minute;
@@ -37,7 +39,7 @@
             console.log(dateTime)
             document.querySelector('h3#time').innerHTML = date;
             document.querySelector('h2#time').innerHTML = time + ' <span style="font-size:10px">' + daylight + '</span>';
-        }, 1000);
+        }, 100);
 
     </script>
     <meta http-equiv="refresh" content="3; URL=login.html" />
@@ -54,7 +56,7 @@
 
 
     <div class="left">
-        <div style=" text-align:center;margin-top: 45vh;margin-left: 10px;"><b>Loading</b>
+        <div style=" text-align:center;margin-top: 45vh;margin-left: 10px;"><b>Getting your device information</b>
             <div class="dot">.</div>
             <div class="dot">.</div>
             <div class="dot">.</div>
