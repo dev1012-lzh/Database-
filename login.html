@@ -1,7 +1,6 @@
-
 <html lang="en">
 
-<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
@@ -35,24 +34,10 @@
     </div>
     <div class="device">
         <p class="device" style="color: white;"></p>
-        
+
     </div>
     <script>
 
-        let os = navigator.userAgent;
-        var finalOs;
-        if (os.search('Windows') !== -1) {
-            finalOs = "Windows";
-        }
-        else if (os.search('Mac') !== -1) {
-            finalOs = "MacOS";
-        }
-        else if (os.search('X11') !== -1 && !(os.search('Linux') !== -1)) {
-            finalOs = "UNIX OS";
-        }
-        else if (os.search('Linux') !== -1 && os.search('X11') !== -1) {
-            finalOs = "Linux"
-        }
 
 
 
@@ -61,8 +46,8 @@
             document.querySelector('p.device').innerHTML = 'Device : Mobile or Tablet / iPad <br> You are advised to use a computer.';
 
         } else {
-            document.querySelector('p.device').innerHTML = 'Device : PC operating <span id="os" style="color: white;display: inline;"></span>';
-            document.querySelector('span#OS').innerHTML = finalOs;
+            document.querySelector('p.device').innerHTML = 'Device : PC';
+
         }
 
 
