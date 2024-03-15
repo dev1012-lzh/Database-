@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fefefe;
+
+        }
+
+        .spinner {
+            box-sizing: border-box;
+            width: 30px;
+            height: 30px;
+            padding: 2px;
+            margin-top: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            overflow: visible;
+            color: #0071c2;
+            text-align: center;
+
+        }
+
+        .spinner>circle {
+            fill: none;
+            stroke: currentColor;
+            cx: 50%;
+            cy: 50%;
+            r: 50%;
+            stroke-width: 3px;
+            stroke-linecap: round;
+            transform-origin: center;
+        }
+    </style>
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/dev1012-lzh/Database-/main/359442353_769330438321080_3812098100413653939_n.ico"
+        type="image/x-icon">
+    <meta http-equiv="refresh" content="5; URL=https://meet.google.com/bxt-fqbj-dad?pli=1&authuser=1" />
+</head>
+
+<body>
+    <div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
+        class="confirm">Please wait while we're getting you ready...
+
+        <div class="loader"><svg class="spinner">
+                <circle>
+                    <animateTransform attributeName="transform" type="rotate" values="-90;810" keyTimes="0;1" dur="2s"
+                        repeatCount="indefinite"></animateTransform>
+                    <animate attributeName="stroke-dashoffset" values="0%;0%;-157.080%" calcMode="spline"
+                        keySplines="0.61, 1, 0.88, 1; 0.12, 0, 0.39, 0" keyTimes="0;0.5;1" dur="2s"
+                        repeatCount="indefinite">
+                    </animate>
+                    <animate attributeName="stroke-dasharray" values="0% 314.159%;157.080% 157.080%;0% 314.159%"
+                        calcMode="spline" keySplines="0.61, 1, 0.88, 1; 0.12, 0, 0.39, 0" keyTimes="0;0.5;1" dur="2s"
+                        repeatCount="indefinite">
+                    </animate>
+                </circle>
+            </svg></div>
+
+        <!--<p class="device"></p>-->
+
+
+    </div>
+</body>
+<script>
+
+    let os = navigator.userAgent;
+    var finalOs;
+    var MacOs;
+    if (os.search('Windows') !== -1) {
+        finalOs = "Windows";
+    }
+    else if (os.search('Mac') !== -1) {
+        finalOs = "MacOS";
+        MacOs = true;
+    }
+    else if (os.search('X11') !== -1 && !(os.search('Linux') !== -1)) {
+        finalOs = "UNIX OS";
+    }
+    else if (os.search('Linux') !== -1 && os.search('X11') !== -1) {
+        finalOs = "Linux"
+    }
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+        document.querySelector('p.device').innerHTML = 'Device : Mobile <br> You are advised to use a computer.';
+
+    } else {
+        if (MacOs) {
+            document.querySelector('p.device').innerHTML = 'Device : Mac / iPad operating <span id="os" style="color: black;display: inline;"></span>';
+            document.querySelector('span#OS').innerHTML = finalOs;
+        } else {
+            document.querySelector('p.device').innerHTML = 'Device : PC operating <span id="os" style="color: black;display: inline;"></span>';
+            document.querySelector('span#OS').innerHTML = finalOs;
+        }
+
+    }
+
+
+</script>
+
+</html>

@@ -1,4 +1,3 @@
-
 <html lang="en">
 
 <head>
@@ -23,7 +22,7 @@
             style="font-size: 20px;margin-top: 30vh;font-family: 'Noto Sans', sans-serif;margin-left: 20px;margin-right: 20px;">
             Temu Duga Calon Pengawas Sesi
             Petang</p>
-        <button onclick="window.location.replace('joinmeeting.html')">Menyertai Temu Duga</button>
+        <button onclick="window.location.replace('joinmeeting.html')">Meneliti arahan dan menyertai </button>
         <button onclick="window.location.replace('giliran.html')">Semak Giliran Saya</button>
 
     </div>
@@ -33,19 +32,22 @@
         <h2 id="time"></h2>
         <h3 id="time"></h3>
     </div>
+
     <div class="device">
         <p class="device" style="color: white;"></p>
-        
+        <span style="color:white;font-size: 10px;">2024 Lembaga Pengawas Sesi Petang</span>
     </div>
     <script>
 
         let os = navigator.userAgent;
         var finalOs;
+        var MacOs;
         if (os.search('Windows') !== -1) {
             finalOs = "Windows";
         }
         else if (os.search('Mac') !== -1) {
             finalOs = "MacOS";
+            MacOs = true;
         }
         else if (os.search('X11') !== -1 && !(os.search('Linux') !== -1)) {
             finalOs = "UNIX OS";
@@ -53,16 +55,19 @@
         else if (os.search('Linux') !== -1 && os.search('X11') !== -1) {
             finalOs = "Linux"
         }
-
-
-
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             alert('We strongly suggest you to use a Computer,which \n supports Google Meet on the web. \n Ignore this message if you have\n downloaded Meet on your mobile.')
             document.querySelector('p.device').innerHTML = 'Device : Mobile <br> You are advised to use <br>a computer.';
 
         } else {
-            document.querySelector('p.device').innerHTML = 'Device : PC / iPad operating <span id="os" style="color: white;display: inline;"></span>';
-            document.querySelector('span#OS').innerHTML = finalOs;
+            if (MacOs) {
+                document.querySelector('p.device').innerHTML = 'Device : Mac / iPad operating <span id="os" style="color: white;display: inline;"></span>';
+                document.querySelector('span#OS').innerHTML = finalOs;
+            } else {
+                document.querySelector('p.device').innerHTML = 'Device : PC operating <span id="os" style="color: white;display: inline;"></span>';
+                document.querySelector('span#OS').innerHTML = finalOs;
+            }
+
         }
 
 

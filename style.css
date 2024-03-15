@@ -204,3 +204,12 @@ div.device{
     bottom: 10px;
     
 }
+
+@media screen and (max-width: 400px) {
+    div.right {
+        display: none;
+    }
+    div.left{
+        width: 100%;
+    }
+}

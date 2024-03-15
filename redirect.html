@@ -37,7 +37,11 @@
             console.log(dateTime)
             document.querySelector('h3#time').innerHTML = date;
             document.querySelector('h2#time').innerHTML = time + ' <span style="font-size:10px">' + daylight + '</span>';
+
+
         }, 1000);
+    
+
 
     </script>
 
@@ -54,15 +58,15 @@
 
 
     <div class="left">
-        <div style=" text-align:center;margin-top: 45vh;margin-left: 10px;"><b>Loading</b>
-            <div class="dot">.</div>
-            <div class="dot">.</div><span class="dot">.</dot>
+        <div style=" text-align:center;margin-top: 45vh;margin-left: 10px;"><b>Please wait</b>
+            <div class="dot">.</div><div class="dot">.</div><div class="dot">.</div>
         </div>
 
     </div>
     <div class="right">
         <h2 id="time" style="margin-left: 10px; display: inline;"></h2>
         <h3 id="time" style="font-size: 13px;margin-left: 10px;"></h3>
+        
     </div>
 
 

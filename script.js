@@ -11,7 +11,8 @@ setInterval(() => {
     if (hour > 12) {
         var hour = hour - 12;
         var daylight = 'pm';
-    }else {
+    }
+    else {
         var daylight = 'am';
     }
     var minute = today.getMinutes();
@@ -29,6 +30,6 @@ setInterval(() => {
     var dateTime = date + ' ' + time;
     console.log(dateTime)
     document.querySelector('h3#time').innerHTML = date;
-    document.querySelector('h2#time').innerHTML = time + ' <span style="font-size:10px">' + daylight+'</span>';
+    document.querySelector('h2#time').innerHTML = time + ' <span style="font-size:10px">' + daylight + '</span>';
 }, 1000);
 
