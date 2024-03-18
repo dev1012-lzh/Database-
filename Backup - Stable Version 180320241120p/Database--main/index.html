@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading..</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script>
+        setInterval(() => {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = '0' + (today.getMonth() + 1);
+            var day = today.getDate();
+
+            var hour = today.getHours();
+            if (hour > 12) {
+                var hour = hour - 12;
+                var daylight = 'pm';
+            }
+            else {
+                var daylight = 'am';
+            }
+            var minute = today.getMinutes();
+            if (minute < 10) {
+                var minute = "0" + minute;
+            }
+            var second = today.getSeconds();
+            if (second < 10) {
+                var second = '0' + second;
+            }
+
+            var date = day + ' - ' + month + ' - ' + year;
+            var time = hour + ":" + minute + ":" + second;
+
+            var dateTime = date + ' ' + time;
+            console.log(dateTime)
+            document.querySelector('h3#time').innerHTML = date;
+            document.querySelector('h2#time').innerHTML = time + ' <span style="font-size:10px">' + daylight + '</span>';
+        }, 100);
+
+    </script>
+    <meta http-equiv="refresh" content="3; URL=login.html" />
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/dev1012-lzh/Database-/main/359442353_769330438321080_3812098100413653939_n.ico"
+        type="image/x-icon">
+
+</head>
+
+<body>
+
+
+
+
+
+    <div class="left">
+        <div style=" text-align:center;margin-top: 45vh;margin-left: 10px;"><b>Fetching device information</b>
+            <div class="dot">.</div>
+            <div class="dot">.</div>
+            <div class="dot">.</div>
+        </div>
+
+    </div>
+    <div class="right">
+        <h2 id="time" style="margin-left: 10px; display: inline;"></h2>
+        <h3 id="time" style="font-size: 13px;margin-left: 10px;"></h3>
+    </div>
+
+
+
+    <br>&nbsp;&nbsp;&nbsp;<span style="font-size: 10px;">2024 Lembaga Pengawas Sesi Petang</span>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 
-document.title = 'Join Meeting';
+document.title = 'Temu Duga Calon Pengawas Sesi Petang';
 
 setInterval(() => {
     var today = new Date();
@@ -11,7 +11,8 @@ setInterval(() => {
     if (hour > 12) {
         var hour = hour - 12;
         var daylight = 'pm';
-    } else {
+    }
+    else {
         var daylight = 'am';
     }
     var minute = today.getMinutes();
@@ -23,19 +24,12 @@ setInterval(() => {
         var second = '0' + second;
     }
 
-    var date = `${day} - ${month} - ${year}`;
-    var time = `${hour}:${minute}:${second}`;
+    var date = day + ' - ' + month + ' - ' + year;
+    var time = hour + ":" + minute + ":" + second;
 
-    var dateTime = `${date} ${time}`;
+    var dateTime = date + ' ' + time;
     console.log(dateTime)
     document.querySelector('h3#time').innerHTML = date;
     document.querySelector('h2#time').innerHTML = time + ' <span style="font-size:10px">' + daylight + '</span>';
-}, 100);
+}, 1000);
 
-function chkbox() {
-    document.querySelector('button').innerHTML = 'Menyertai Temu Duga'
-    document.querySelector('button').disabled = false;
-
-    document.querySelector('button').style.cursor = 'pointer';
-    document.querySelector('button').style.background = 'white';
-}
