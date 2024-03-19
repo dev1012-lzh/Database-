@@ -41,15 +41,24 @@
             transform-origin: center;
         }
     </style>
+    <script defer>
+        setTimeout(function () { window.open('https://meet.google.com/bxt-fqbj-dad?pli=1&authuser=0'); }, 3000)
+        setTimeout(function () { document.querySelector('span.p').innerHTML = 'Meet should be launched now. Try <a href="https://meet.google.com/bxt-fqbj-dad?pli=1&authuser=0" target="_blank" rel="noopener noreferrer">this</a> if failed.' }, 7000);
+        setTimeout(function () {
+            document.querySelector('div.confirm').innerHTML = 'Thank you for taking part in this meeting. We will notify you for your results in a few schooldays. ';
+            alert('Thank you for taking part in this meeting. We will notify you for your results in a few schooldays.');
+        }, 17000);
+
+    </script>
     <link rel="shortcut icon"
         href="https://raw.githubusercontent.com/dev1012-lzh/Database-/main/359442353_769330438321080_3812098100413653939_n.ico"
         type="image/x-icon">
-    <meta http-equiv="refresh" content="5; URL=https://meet.google.com/bxt-fqbj-dad?pli=1&authuser=1" />
+
 </head>
 
 <body>
     <div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
-        class="confirm">Please wait while we're getting you ready...
+        class="confirm"><span class="p">Please wait while we're getting you ready...</span>
 
         <div class="loader"><svg class="spinner">
                 <circle>
