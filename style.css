@@ -1,6 +1,5 @@
 /*Animation IMPORTANT Attributes*/
-div{
-    transition-duration: 0.3s !important;
+*{    transition-duration: 0.3s ;
 }
 
 button {
