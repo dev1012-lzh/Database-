@@ -17,29 +17,84 @@
         }
 
         .spinner {
-            box-sizing: border-box;
+            position: relative;
             width: 30px;
-            height: 30px;
-            padding: 2px;
             margin-top: 20px;
-            margin-left: 50%;
+            height: 30px;
+            left: 50%;
             transform: translateX(-50%);
-            overflow: visible;
-            color: #0071c2;
-            text-align: center;
-            
         }
 
-        .spinner>circle {
-            fill: none;
-            stroke: currentColor;
-            cx: 50%;
-            cy: 50%;
-            r: 50%;
-            stroke-width: 3px;
-            stroke-linecap: round;
-            transform-origin: center;
-            
+        .spinner div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            animation: r 5s infinite cubic-bezier(0.15, 0.55, 0.85, 0.45), o 5s infinite step-end;
+        }
+
+        .spinner div::after {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 5px;
+            background-color: #0071c2;
+            border-radius: 100%;
+            translate: 0 27.5px;
+        }
+
+        .spinner div:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .spinner div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .spinner div:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .spinner div:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .spinner div:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        .spinner div:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        @keyframes r {
+            0% {
+                transform: rotate(-90deg);
+            }
+
+            35% {
+                transform: rotate(270deg);
+            }
+
+            70% {
+                transform: rotate(630deg);
+            }
+
+            100% {
+                transform: rotate(630deg);
+            }
+        }
+
+        @keyframes o {
+            0% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0;
+            }
         }
 
         a {
@@ -65,7 +120,7 @@
     <script defer>
 
         setTimeout(function () { document.querySelector('div.p').innerHTML = ' <a href="https://meet.google.com/bxt-fqbj-dad?pli=1&authuser=0" target="_blank" rel="noopener noreferrer">Join Meet</a> if failed redirecting.' }, 5000);
-        
+
 
 
 
@@ -84,60 +139,53 @@
         class="confirm">
         <div class="p">Please wait while we're getting you ready...</div>
 
-        <div class="loader"><svg class="spinner">
-                <circle>
-                    <animateTransform attributeName="transform" type="rotate" values="-90;810" keyTimes="0;1" dur="2s"
-                        repeatCount="indefinite"></animateTransform>
-                    <animate attributeName="stroke-dashoffset" values="0%;0%;-157.080%" calcMode="spline"
-                        keySplines="0.61, 1, 0.88, 1; 0.12, 0, 0.39, 0" keyTimes="0;0.5;1" dur="2s"
-                        repeatCount="indefinite">
-                    </animate>
-                    <animate attributeName="stroke-dasharray" values="0% 314.159%;157.080% 157.080%;0% 314.159%"
-                        calcMode="spline" keySplines="0.61, 1, 0.88, 1; 0.12, 0, 0.39, 0" keyTimes="0;0.5;1" dur="2s"
-                        repeatCount="indefinite">
-                    </animate>
-                </circle>
-            </svg></div>
-
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <!--<p class="device"></p>-->
 
 
     </div>
 </body>
 <script>
-/*
-    let os = navigator.userAgent;
-    var finalOs;
-    var MacOs;
-    if (os.search('Windows') !== -1) {
-        finalOs = "Windows";
-    }
-    else if (os.search('Mac') !== -1) {
-        finalOs = "MacOS";
-        MacOs = true;
-    }
-    else if (os.search('X11') !== -1 && !(os.search('Linux') !== -1)) {
-        finalOs = "UNIX OS";
-    }
-    else if (os.search('Linux') !== -1 && os.search('X11') !== -1) {
-        finalOs = "Linux"
-    }
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
-        document.querySelector('p.device').innerHTML = 'Device : Mobile <br> You are advised to use a computer.';
-
-    } else {
-        if (MacOs) {
-            document.querySelector('p.device').innerHTML = 'Device : Mac / iPad operating <span id="os" style="color: black;display: inline;"></span>';
-            document.querySelector('span#OS').innerHTML = finalOs;
-        } else {
-            document.querySelector('p.device').innerHTML = 'Device : PC operating <span id="os" style="color: black;display: inline;"></span>';
-            document.querySelector('span#OS').innerHTML = finalOs;
+    /*
+        let os = navigator.userAgent;
+        var finalOs;
+        var MacOs;
+        if (os.search('Windows') !== -1) {
+            finalOs = "Windows";
         }
-
-    }
-
-*/
+        else if (os.search('Mac') !== -1) {
+            finalOs = "MacOS";
+            MacOs = true;
+        }
+        else if (os.search('X11') !== -1 && !(os.search('Linux') !== -1)) {
+            finalOs = "UNIX OS";
+        }
+        else if (os.search('Linux') !== -1 && os.search('X11') !== -1) {
+            finalOs = "Linux"
+        }
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    
+            document.querySelector('p.device').innerHTML = 'Device : Mobile <br> You are advised to use a computer.';
+    
+        } else {
+            if (MacOs) {
+                document.querySelector('p.device').innerHTML = 'Device : Mac / iPad operating <span id="os" style="color: black;display: inline;"></span>';
+                document.querySelector('span#OS').innerHTML = finalOs;
+            } else {
+                document.querySelector('p.device').innerHTML = 'Device : PC operating <span id="os" style="color: black;display: inline;"></span>';
+                document.querySelector('span#OS').innerHTML = finalOs;
+            }
+    
+        }
+    
+    */
 </script>
 
 </html>
