@@ -30,12 +30,12 @@ setInterval(() => {
     console.log(dateTime)
     document.querySelector('h3#time').innerHTML = date;
     document.querySelector('h2#time').innerHTML = time + ' <span style="font-size:10px">' + daylight + '</span>';
-}, 100);
+}, 500);
 
 function chkbox() {
     document.querySelector('button').innerHTML = 'Menyertai Temu Duga'
     document.querySelector('button').disabled = false;
-
+    document.querySelector('#chkbox').disabled = true;
     document.querySelector('button').style.cursor = 'pointer';
     document.querySelector('button').style.background = 'white';
 }
