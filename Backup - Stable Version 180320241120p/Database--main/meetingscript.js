@@ -35,7 +35,8 @@ setInterval(() => {
 function chkbox() {
     document.querySelector('button').innerHTML = 'Menyertai Temu Duga'
     document.querySelector('button').disabled = false;
-    document.querySelector('#chkbox').disabled = true;
+    document.querySelector('#chkbox').disabled = false;
+    alert('! 未到时间，请查看')
     document.querySelector('button').style.cursor = 'pointer';
     document.querySelector('button').style.background = 'white';
 }
