@@ -33,8 +33,8 @@ setInterval(() => {
 }, 500);
 
 function chkbox() {
-    document.querySelector('button').innerHTML = 'Menyertai Temu Duga'
-    document.querySelector('button').disabled = false;
-    document.querySelector('button').style.cursor = 'pointer';
-    document.querySelector('button').style.background = 'white';
+    document.querySelector('button.temuduga').innerHTML = 'Menyertai Temu Duga'
+    document.querySelector('button.temuduga').disabled = false;
+    document.querySelector('button.temuduga').style.cursor = 'pointer';
+    document.querySelector('button.temuduga').style.background = 'white';
 }
