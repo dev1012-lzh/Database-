@@ -35,7 +35,6 @@ setInterval(() => {
 function chkbox() {
     document.querySelector('button').innerHTML = 'Menyertai Temu Duga'
     document.querySelector('button').disabled = false;
-    document.querySelector('#chkbox').disabled = true;
     document.querySelector('button').style.cursor = 'pointer';
     document.querySelector('button').style.background = 'white';
 }
